@@ -20417,6 +20417,8 @@ in
     i3GapsSupport = false;
   };
 
+  portfolio = callPackage ../applications/office/portfolio { };
+
   ptex = callPackage ../development/libraries/ptex {};
 
   qbec = callPackage ../applications/networking/cluster/qbec { };
