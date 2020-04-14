@@ -1,11 +1,8 @@
 { stdenv, glibc, gcc-unwrapped, autoPatchelfHook, fetchurl, libsecret, jre, makeWrapper, makeDesktopItem }:
 
 let
-  metadata = assert stdenv.hostPlatform.system == "i686-linux" || stdenv.hostPlatform.system == "x86_64-linux";
-    if stdenv.hostPlatform.system == "i686-linux" then
-      { arch = "x86"; sha256 = "0fdcapchg4zg25hn7kghf3i6hipw6cngn7v3cvnq2c9dndznvsxq"; }
-    else
-      { arch = "x86_64"; sha256 = "06jqq9fl4xf6c1a672hvkacx5p3x765pp1gxkl5f9lmi0pk506rf"; };
+  metadata = assert stdenv.hostPlatform.system == "x86_64-linux";
+  { arch = "x86_64"; sha256 = "06jqq9fl4xf6c1a672hvkacx5p3x765pp1gxkl5f9lmi0pk506rf"; };
   desktopItem = makeDesktopItem {
     name = "Portfolio";
     exec = "portfolio";
