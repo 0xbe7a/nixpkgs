@@ -2,7 +2,7 @@
 
 let
   metadata = assert stdenv.hostPlatform.system == "x86_64-linux";
-  { arch = "x86_64"; sha256 = "06jqq9fl4xf6c1a672hvkacx5p3x765pp1gxkl5f9lmi0pk506rf"; };
+  { arch = "x86_64"; sha256 = "b0cc728e5b8bc516ecbc7ddda6d17ac25739307376a758f029d2ea9cf12585c9"; };
   desktopItem = makeDesktopItem {
     name = "Portfolio";
     exec = "portfolio";
@@ -14,7 +14,7 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "PortfolioPerformance";
-  version = "0.43.1";
+  version = "0.46.1";
 
   src = fetchurl {
     url = "https://github.com/buchen/portfolio/releases/download/0.43.1/PortfolioPerformance-${version}-linux.gtk.${metadata.arch}.tar.gz";
